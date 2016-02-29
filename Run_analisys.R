@@ -1,4 +1,3 @@
-
 ## Create one R script called run_analysis.R that does the following:
 ## 1. Merges the training and the test sets to create one data set.
 ## 2. Extracts only the measurements on the mean and standard deviation for each measurement.
@@ -6,7 +5,7 @@
 ## 4. Appropriately labels the data set with descriptive activity names.
 ## 5. Creates a second, independent tidy data set with the average of each variable for 
 ## each activity and each subject.
-## Load reshape2 pacakge required
+## Load reshape2 pacakge
   library(reshape2)
 ## Load data of activity labels and features
   activity_labels <- read.table("./activity_labels.txt")$V2
@@ -44,6 +43,36 @@
   train_data <- cbind(subject_train, y_train, x_train)
 ## Merge the test and train data
   big_data <- rbind(test_data, train_data)
+## Change column names to more descriptive names
+colNames <- colnames(big_data)
+for (i in 1: length(colNames))
+{
+
+  colNames[i] = gsub("\\()","",colNames[i])
+
+  colNames[i] = gsub("-std$","SD",colNames[i])
+
+  colNames[i] = gsub("-mean","Mean",colNames[i])
+
+  colNames[i] = gsub("^(t)","time",colNames[i])
+
+  colNames[i] = gsub("^(f)","freq",colNames[i])
+
+  colNames[i] = gsub("([Gg]ravity)","Gravity",colNames[i])
+
+  colNames[i] = gsub("([Bb]ody[Bb]ody|[Bb]ody)","Body",colNames[i])
+
+  colNames[i] = gsub("[Gg]yro","Gyro",colNames[i])
+
+  colNames[i] = gsub("AccMag","AccMagnitude",colNames[i])
+
+  colNames[i] = gsub("([Bb]odyaccjerkmag)","BodyAccJerkMagnitude",colNames[i])
+
+  colNames[i] = gsub("JerkMag","JerkMagnitude",colNames[i])
+
+  colNames[i] = gsub("GyroMag","GyroMagnitude",colNames[i])
+
+}
 ## Creates a second, independent tidy data set with the average of each variable for 
 ## each activity and each subject.
   melted <- melt(big_data, id=c("subject", "activity_ID", "activity_Label"))
