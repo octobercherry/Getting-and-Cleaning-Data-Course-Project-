@@ -3,11 +3,17 @@
 activity_labels.txt  : Numerical tags for each type of activity that the subjects performed. Six total.
 
 features_info.txt :  Description of the measurements made while each subject performed each activity. 
+
                     1 WALKING
+                    
                     2 WALKING_UPSTAIRS
+                    
                     3 WALKING_DOWNSTAIRS
+                    
                     4 SITTING
+                    
                     5 STANDING
+                    
                     6 LAYING
                     
 features.txt : A listing of each type of measurement made with descriptive names. 561 total. Each subject                          performing one of the six activities will generate 561 measurements.
