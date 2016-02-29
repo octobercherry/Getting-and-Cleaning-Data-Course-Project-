@@ -136,4 +136,6 @@ Merge columns of train files
 
 Merge rows of test and train files
 
+Rename the columns of new data to be more descriptive
+
 Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
