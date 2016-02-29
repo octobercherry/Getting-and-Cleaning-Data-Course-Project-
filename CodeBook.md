@@ -1,4 +1,4 @@
-## In the main dir, there are four files: activity_labels.txt features_info.txt features.txt README.txt
+## In the main dir, there are four files: activity_labels.txt; features_info.txt; features.txt; README.txt
 activity_labels.txt  : Numerical tags for each type of activity that the subjects performed. Six total.
 
 features_info.txt :  Description of the measurements made while each subject performed each activity. 
