@@ -31,9 +31,14 @@ X_train.txt : Table of measurements (features) 7352 lines each line has 561 colu
 
 y_train.txt : Single column list of activities performed for each of the rows in X_train.txt identified by              numerical values 1-6.
 ## Variable names in the tiday_Data
+"Subject" "activity_ID" and "activity_Label" are ID columns. The rest variables are mean measurement of each subject on each activity and measurement.
+
 "subject" 
+
 "activity_ID"
+
 "activity_Label"
+
 "tBodyAcc-mean()-X"
 "tBodyAcc-mean()-Y"           
 "tBodyAcc-mean()-Z"          
