@@ -4,3 +4,24 @@
 ##Uses descriptive activity names to name the activities in the data set
 ##Appropriately labels the data set with descriptive variable names.
 ##Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+Variables in the Tidy Data Set
+================================================================================
+
+ActivityName:
+
+   Descriptive activity names.
+
+
+SubjectID:
+
+   The subject who performed the activity.
+
+
+variable:
+
+   Descriptive variable names.
+
+
+mean:
+
+   The average of each variable for each activity and each subject.
