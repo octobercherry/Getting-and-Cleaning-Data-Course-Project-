@@ -48,4 +48,4 @@
 ## each activity and each subject.
   melted <- melt(big_data, id=c("subject", "activity_ID", "activity_Label"))
   tidy_data <- dcast(melted, subject+activity_ID+activity_Label ~ variable, mean)
-  write.csv(tidy_data, "tidy_data.csv", row.names= FALSE)
+  write.csv(tidy_data, "./tidy_data.txt", row.names= FALSE)
