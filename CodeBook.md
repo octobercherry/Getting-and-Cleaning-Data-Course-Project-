@@ -30,3 +30,25 @@ subject_train.txt : Single column of numerical ids for a random subset of the 30
 X_train.txt : Table of measurements (features) 7352 lines each line has 561 columns of                                 measurements 21 subjects total.
 
 y_train.txt : Single column list of activities performed for each of the rows in X_train.txt identified by              numerical values 1-6.
+##The script run_analysis.R performs the following steps:
+Load data from main directory.
+
+Load data from test files
+
+Select only mean and standard deviation measurement
+
+Name test files
+
+Merges columns of test files
+
+Load data from train files
+
+Select only mean and standard deviation measurement
+
+Name train files
+
+Merge columns of train files
+
+Merge rows of test and train files
+
+Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
