@@ -6,7 +6,7 @@
 ## 4. Appropriately labels the data set with descriptive activity names.
 ## 5. Creates a second, independent tidy data set with the average of each variable for 
 ## each activity and each subject.
-## Load reshape2 pacakge
+## Load reshape2 pacakge required
   library(reshape2)
 ## Load data of activity labels and features
   activity_labels <- read.table("./activity_labels.txt")$V2
